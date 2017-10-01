@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Artist &mdash; </title>
+	<title>Artist</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -51,7 +51,7 @@
 					<li><a href="Artsts.html">Artists</a></li>
 					<li><a href="contact.html">Contact</a></li>
                     <li><a href="about_us.html">About_us</a></li>
-                    <li><a href="Membership Registrartion.html">Membership Registration	</a></li>
+                    <li><a href="Membership_Reg.html">Membership Registration	</a></li>
 				</ul>
 			</div>
 		</div>
@@ -76,9 +76,9 @@
                     
 					<li><span class="filter" data-filter=".logo"><a href = "about_us.html">About Us</a></span></li> 
 					
-					<li><span class="filter" data-filter=".web"><a href = "Membership_Reg.html">Membership registration</a></span></li>
+					<li><span class="filter" data-filter=".web"><a href = "Membership_reg.html">Membership registration</a></span></li>
 				</ul>
-                             <div id="fh5co-portfolio-section">
+             <div id="fh5co-portfolio-section">
 	  <div class="container">
 			
 
@@ -233,7 +233,9 @@ The Camerata Singers comprises a group of trained singers, both male and female,
 					</div>
 				</div>
                 
-
+                
+			
+	
 		<!-- End: fh5co-services-section -->
 		<footer>
 			<div id="footer" class="fh5co-border-line">
@@ -241,6 +243,7 @@ The Camerata Singers comprises a group of trained singers, both male and female,
 					<div class="row">
 						<div class="col-md-6">
 							<p>2017 Group 1 <a href="#">TCMC</a>.</p>
+           
 						</div>
 						<div class="col-md-6 social-text-align">
 							<p class="fh5co-social-icons">
@@ -253,6 +256,7 @@ The Camerata Singers comprises a group of trained singers, both male and female,
 				</div>
 			</div>
 		</footer>
+	
 	</div>
 
 	<!-- jQuery -->
@@ -263,13 +267,42 @@ The Camerata Singers comprises a group of trained singers, both male and female,
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Waypoints -->
 	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Parallax Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Portfolio Filter Mixitup -->
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
 
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 
-	
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixItUp({
+  				selectors: {
+    			  target: '.portfolio',
+    			  filter: '.filter'	
+    		  },
+    		  load: {
+      		  filter: '.all'  
+      		}     
+				});								
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+
+		
+		
+	});	
+	</script>
 
 	</body>
 </html>
