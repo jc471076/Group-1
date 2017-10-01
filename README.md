@@ -11,3 +11,6 @@ for the style css part
 i have used some mapping of the style sass editing
 
 for the bootstrap ( used the getbootstrap.com)
+
+hey guys I made index page
+having problems in java script
